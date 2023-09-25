@@ -1,0 +1,133 @@
+What is Spring?
+Spring is a Dependency Injection framework to make java application loosely coupled.
+
+Spring framework makes the easy development of JavaEE application.
+
+It was developed by Rod Johnson in 2003
+
+-----------------------------------------------------------
+
+Dependency Injection
+It is design pattern
+
+Spring and JEE
+UI Layer                              ProductController
+Business/Services Layer               ProductService
+Data Access Layer ------> Database    ProductDao --------> Database
+
+-----------------------------------------------------------
+public void init()  --> web services, load classes
+
+public void destroy() --> we can change the name of this methods but signature should be same.
+To close up will write code in destroy
+
+
+----------------------------------------------------------
+Spring bean  --> Simple Java Class
+
+Configuration Xml File --> Property --> Instiatate init()  --> configuration file load or any web services which is written.
+Then we Read and use the bean
+
+destroy() --> Before the object to close 
+After clean up then it will close
+
+After property set then initialization starts
+
+-------------------------------------------------------------
+
+Configure Technique
+Xml
+Spring Interface
+Annotation
+
+---------------------------------------------------------------
+
+Using Interfaces
+Implementing Bean Lifecycle using Interfaces InitializingBean
+DisposableBean
+
+InitializingBean  --> init functionality
+DisposableBean    --> destroy functionality
+
+Using Annotations
+Implementing Bean Lifecycle using Annotations
+@PostConstruct @PreDestroy
+
+-----------------------------------------------------------------
+
+Autowiring in spring
+Feature of spring Framework in which spring container inject the dependencies automatically.
+Autowiring can't be used to inject primitive and string values. It works with reference only
+
+A --------------------> B
+A object is linked with B Object --> This will be automated
+
+Manually                 Automatically
+
+<ref bean=""/>           
+(Programmer)             Spring Container
+
+	    ---------Autowiring------
+	   |						 |
+	   XML						Annotations
+(Autowiring Modes)
+      no						@Autowired
+      byName					@Qualifier
+      byType
+      constructor
+      autodetect -> It is deprecated since Spring 3
+      
+      
+      
+Autowiring Advantages
+.Automatic
+.less code
+
+Autowiring Disadvantages
+.No control of programmer
+.It can't be used for primitive and string values.
+
+
+-------------------------------------------------------------------------------------------------
+Spring JDBC
+
+what is spring JDBC?
+Introduction to Spring JDBC?
+Problems of JDBC?
+How Spring JDBC Solves these problems?
+
+Spring JDBC is a powerful mechanishm to connect to the database and execute SQL queries.
+
+JDBC is  API to perform operation with database.
+
+Problems of JDBC
+1.We need to write a lot of code.
+2.Exception Handling Problem:Checked Exception
+SQLException
+3.Repeating of all these codes from one to another
+database logic is a time consuming task.
+4.Solutions of JDBC problems are provided by
+Spring JDBC
+5.Spring JDBC provide class JdbcTemplate which has all the important methods to perform operation with database.
+
+JdbcTemplate methods -> 
+update() -> insert,update,delete...
+execute() -> select queries....
+
+--------------------------------------------------------------
+Selecting Data Using Spring JDBC
+
+public T queryForObject(String sql,RowMapper<T> rowMapper, Object args)
+
+public List<T> query(String sql, RowMapper<T> rowMapper)
+
+ResultSet Object -------> Row Mapper -----------> Class Object 
+							  ^
+							  |
+							  |
+							  |
+						  Implementation
+						  of row mapper
+						  
+	Selecting Data from
+	database using Spring Jdbc
