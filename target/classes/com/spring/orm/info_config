@@ -1,0 +1,22 @@
+Configuration done:
+
+-------------------------------------
+
+CRUD ->
+C = Create
+R = Read , read single data, read multiple data
+U = Update
+D = Delete
+
+
+
+-------------------------------------
+Console Based Application
+
+***************Welcome to spring orm project***************
+PRESS 1 for add New Student
+PRESS 2 for display all students
+PRESS 3 for get detail of single student
+PRESS 4 for delete Students
+PRESS 5 for update Students
+PRESS 6 for exit Assignment

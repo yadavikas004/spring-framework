@@ -12,8 +12,7 @@ import javax.persistence.Table;
 public class Student {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "STUDENT_ID")
+	@Column(name = "STUDENT_ID")  //@GeneratedValue(strategy = GenerationType.IDENTITY)  --> To Make Id in Sequence
 	private int studentId;
 	
 	@Column(name = "STUDENT_NAME")

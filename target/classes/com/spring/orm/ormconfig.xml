@@ -43,7 +43,7 @@
 		<property name="sessionFactory" ref="factory"/>
 	</bean>
 	
-	<bean class="com.spring.orm.dao.StudentDao"  name="studentDao">
+	<bean class="com.spring.orm.dao.StudentDaoImpl"  name="studentDao">
 		<property name="hibernateTemplate" ref="hibernateTemplate"/>
 	</bean>
 	
