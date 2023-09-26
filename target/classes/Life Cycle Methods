@@ -131,3 +131,47 @@ ResultSet Object -------> Row Mapper -----------> Class Object
 						  
 	Selecting Data from
 	database using Spring Jdbc
+	
+-----------------------------------------------------------------------------
+
+What is Spring ORM?
+Why to use Spring ORM?
+Full Game of Spring ORM
+
+Spring ORM  -> Spring With ORM Frameworks
+-> Hibernate
+-> Toplink
+-> iBatis
+
+.Less coding is required
+.Easy to test
+.Better exception handling:
+.Integrated transaction management
+
+Working with Database
+Java Program -> JDBC  ->  Database
+Database <- JDBC  <- Java Program
+
+class ABC{
+	String name;
+	String college;
+}
+
+How to work with Spring ORM
+HibernateTemplate  Session
+
+Save
+Update
+Insert
+Get
+loadAll
+
+
+ProductDao -> HibernateTemplate -> SessionFactory(interface)
+												|
+												|
+												|
+				DataSource  <--------LocalSessionFactoryBean
+			Database Properties				dataSource
+			url,username,password			Hibernate Properties
+											AnnotatedClass

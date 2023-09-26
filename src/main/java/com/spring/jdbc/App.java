@@ -1,6 +1,7 @@
 package com.spring.jdbc;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.io.*;
 import java.util.List;
@@ -14,7 +15,8 @@ public class App {
 		// TODO Auto-generated method stub
 		System.out.println("My Program Started...");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/jdbcconfig.xml");
+//		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/jdbcconfig.xml");
+		ApplicationContext context = new AnnotationConfigApplicationContext(JdbcConfig.class);
 //		JdbcTemplate template = context.getBean("jdbcTemplate",JdbcTemplate.class);
 
 		// insert query
